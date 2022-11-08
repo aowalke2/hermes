@@ -1,0 +1,15 @@
+{
+  "short_name": "Hermes",
+  "name": "A Map Service",
+  "icons": [
+    {
+      "src": "hermes.png",
+      "sizes": "259x354",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
