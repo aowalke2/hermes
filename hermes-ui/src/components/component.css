@@ -1,0 +1,33 @@
+.search-form {
+  /*min-height: 100vh;*/
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  font-size: calc(10px + 1vmin);
+  color: white;
+  gap: 10px;
+}
+
+.location, .destination {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.location-input, .destination-input {
+  height: 32px;
+  font-size: calc(10px + 1vmin);
+}
+
+.search-button {
+  height: 32px;
+  font-size: calc(10px + 1vmin);
+}
+
+.message{
+  height: 32px;
+  font-size: calc(10px + 1vmin);
+  color: white;
+}
