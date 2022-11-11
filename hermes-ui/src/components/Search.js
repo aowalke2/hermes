@@ -4,7 +4,7 @@ import { Form, FormGroup, Label, Input, Button } from 'reactstrap';
 
 function getCoordinates(){
     return new Promise((resolve, reject) => {
-        navigator.geolocation.getCurrentPosition(resolve, reject);
+      navigator.geolocation.getCurrentPosition(resolve, reject);
     });
 }
 
