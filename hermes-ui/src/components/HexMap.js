@@ -5,7 +5,7 @@ import { Map } from 'react-map-gl';
 import geojson2h3 from 'geojson2h3';
 
 // Set your mapbox access token here
-const MAPBOX_ACCESS_TOKEN = 'pk.eyJ1IjoiYW93YWxrZTIiLCJhIjoiY2xhYWJudXBxMDF5bTN3bzI5M3Bld2Z6OCJ9.g1JbFN_tHL2EZBHU0_oghQ';
+const MAPBOX_ACCESS_TOKEN = '';
 
 // Viewport settings
 const INITIAL_VIEW_STATE = {
@@ -74,15 +74,17 @@ function HexMap() {
   });
 
   return (
-    <DeckGL 
-      initialViewState={INITIAL_VIEW_STATE} 
-      controller={true} 
-      layers={layers}>
-      <Map mapboxAccessToken={MAPBOX_ACCESS_TOKEN} 
-          style={{width: 600, height: 400}}
-          mapStyle="mapbox://styles/mapbox/streets-v11"
-      />
-    </DeckGL>
+    <div className="map">
+      <DeckGL 
+        initialViewState={INITIAL_VIEW_STATE} 
+        controller={true} 
+        layers={layers}>
+        <Map mapboxAccessToken={MAPBOX_ACCESS_TOKEN} 
+            style={{width: 600, height: 400}}
+            mapStyle="mapbox://styles/mapbox/streets-v11"
+        />
+      </DeckGL>
+    </div>
   );
 }
 

@@ -13,12 +13,11 @@ code {
     monospace;
 }
 
-.search {
-  text-align: center;
+.container {
+  display: flex;
 }
-
-.map-container {
-  height: 600px;
+.search {
+  width: 200px;
 }
 
 .sidebar {

@@ -1,6 +1,6 @@
 .search-form {
   /*min-height: 100vh;*/
-  width: 500px;
+  width: 200px;
   display: flex;
   flex-direction: column;
   align-items: left;
@@ -30,4 +30,9 @@
   height: 32px;
   font-size: calc(10px + 1vmin);
   color: white;
+}
+
+.map {
+  height: auto;
+  width: 500px;
 }
