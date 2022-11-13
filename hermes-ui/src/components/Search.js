@@ -33,7 +33,7 @@ function Search() {
 
     console.log(location)
     return(
-        <div>
+        <div className="search">
             <Form className="search-form">
                 <FormGroup className="location">
                     <Label for="location-input">Location</Label>

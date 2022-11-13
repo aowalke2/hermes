@@ -1,6 +1,12 @@
+.search {
+  min-height: 100vh;
+  position: absolute;
+  z-index: 2;
+  background-color: #282c34;
+}
+
 .search-form {
-  /*min-height: 100vh;*/
-  width: 200px;
+  width: 400px;
   display: flex;
   flex-direction: column;
   align-items: left;
@@ -30,9 +36,4 @@
   height: 32px;
   font-size: calc(10px + 1vmin);
   color: white;
-}
-
-.map {
-  height: auto;
-  width: 500px;
 }

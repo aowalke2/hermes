@@ -74,17 +74,14 @@ function HexMap() {
   });
 
   return (
-    <div className="map">
-      <DeckGL 
-        initialViewState={INITIAL_VIEW_STATE} 
-        controller={true} 
-        layers={layers}>
-        <Map mapboxAccessToken={MAPBOX_ACCESS_TOKEN} 
-            style={{width: 600, height: 400}}
-            mapStyle="mapbox://styles/mapbox/streets-v11"
-        />
-      </DeckGL>
-    </div>
+    <DeckGL 
+      initialViewState={INITIAL_VIEW_STATE} 
+      controller={true}
+      layers={layers}>
+      <Map mapboxAccessToken={MAPBOX_ACCESS_TOKEN} 
+          mapStyle="mapbox://styles/mapbox/streets-v11"
+      />
+    </DeckGL>
   );
 }
 
