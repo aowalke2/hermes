@@ -5,13 +5,13 @@ import { Map } from 'react-map-gl';
 import geojson2h3 from 'geojson2h3';
 
 // Set your mapbox access token here
-const MAPBOX_ACCESS_TOKEN = '';
+const MAPBOX_ACCESS_TOKEN = process.env.REACT_APP_MAPBOX_API_KEY;
 
 // Viewport settings
 const INITIAL_VIEW_STATE = {
   longitude: -122.41669,
   latitude: 37.7853,
-  zoom: 13,
+  zoom: 12,
   pitch: 0,
   bearing: 0
 };

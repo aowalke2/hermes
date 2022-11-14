@@ -1,19 +1,22 @@
 .search {
   min-height: 100vh;
   position: absolute;
-  z-index: 2;
-  background-color: #282c34;
+  z-index: 1;
+  background-color: white;
+  border-right: 1px solid #3C4043;
 }
 
 .search-form {
   width: 400px;
   display: flex;
   flex-direction: column;
-  align-items: left;
+  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 1vmin);
   color: white;
   gap: 10px;
+  margin-top: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #3C4043;
 }
 
 .location, .destination {
@@ -22,18 +25,31 @@
   gap: 10px;
 }
 
-.location-input, .destination-input {
-  height: 32px;
-  font-size: calc(10px + 1vmin);
+.location-input, .destination-input{
+  height: 40px;
+  width: 270px;
+  font-size: 15px;
+  border-radius: 8px;
+  border-width: 1px;
+  border-color: #3C4043;
 }
 
 .search-button {
-  height: 32px;
-  font-size: calc(10px + 1vmin);
+  height: 35px;
+  width: 150px;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  border-radius: 8px;
+  border-width: 0;
+  background-color: rgb(99, 26, 194);
 }
 
-.message{
-  height: 32px;
-  font-size: calc(10px + 1vmin);
-  color: white;
+.search-button:hover{
+  background-color: rgb(79, 21, 156);
+}
+
+.search-button:active{
+  background-color: rgb(79, 21, 156);
+  transform: scale(0.9);
 }

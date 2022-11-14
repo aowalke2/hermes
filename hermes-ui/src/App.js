@@ -1,8 +1,6 @@
 import './index.css';
 import Search from './components/Search';
 import HexMap from './components/HexMap';
-import mapboxgl from 'mapbox-gl'
-import geojson2h3 from 'geojson2h3';
 import { Container } from 'reactstrap';
 
 function App() {

@@ -1,6 +1,6 @@
 import './component.css';
 import React, { useEffect, useState} from 'react';
-import { Form, FormGroup, Label, Input, Button } from 'reactstrap';
+import { Form, FormGroup, Input, Button } from 'reactstrap';
 
 function getCoordinates(){
     return new Promise((resolve, reject) => {
@@ -31,22 +31,17 @@ function Search() {
     
     getCoordinates()
 
-    console.log(location)
     return(
         <div className="search">
             <Form className="search-form">
                 <FormGroup className="location">
-                    <Label for="location-input">Location</Label>
-                    <Input className="location-input" id="location-input" placeholder="Your Location" type="search"/>
+                    <Input className="location-input" placeholder="Choose starting point" type="search"/>
                 </FormGroup>
                 <FormGroup className="destination ">
-                    <Label for="destination-input">Destination</Label>
-                    <Input className="location-input" id="destination-input" placeholder="Destination" type="search"/>
+                    <Input className="location-input" placeholder="Choose destination" type="search"/>
                 </FormGroup>
-                <Button className="search-button" onClick={() => console.log("balls")}>Submit</Button>
+                <Button className="search-button" onClick={() => console.log("balls")}>Find Route</Button>
             </Form>
-
-            <p className="message">Your location is {location.latitude}, {location.longitude}</p>
         </div>
     );
 }
