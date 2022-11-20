@@ -1,23 +1,46 @@
 import './index.css';
-import Search from './components/Search';
+import Location from './components/Location';
 import HexMap from './components/HexMap';
-import { Container } from 'reactstrap';
+import { Container, Form, Button } from 'reactstrap';
+import { useRef } from 'react';
 
-function App() {
-  // const geo = geojson2h3.h3SetToFeatureCollection(
-  //   Object.keys(hexagons),
-  //   hex => ({value: hexagons[hex]})
-  // );
+export default function App() {
+  const startRef = useRef();
+  const destinationRef = useRef();
 
-  // console.log(geo)
-  // console.log(map)
+  const getCoordinates = async(address) => {
+    try {
+        const response = await fetch('location/search?q=' + encodeURIComponent(address), {
+            method: 'GET',
+        });
+        
+        if(response.status !== 200){
+            throw response.status
+        }
+        
+        const resultList = await response.json();
+        console.log(resultList[0]) //Assuming top one is the one i want for now
+    } catch (err){
+        console.error(err);
+    }
+  }
+
+  const getLocations = () => {
+    const start = getCoordinates(startRef.current.getLocation());
+    const destination = getCoordinates(destinationRef.current.getLocation());
+    console.log(start + '\n' + destination);
+  }
 
   return (
-    <Container>
-      <Search></Search>
+    <div>
+      <Container className="route-pane">
+        <Form className="route-form">
+          <Location placeholder="Choose starting point" ref={startRef}/>
+          <Location placeholder="Choose destination" ref={destinationRef}/>
+          <Button className="route-button" onClick={getLocations}>Find Route</Button>
+        </Form>
+      </Container>
       <HexMap></HexMap>
-    </Container>
+    </div>
   );
 }
-
-export default App;

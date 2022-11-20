@@ -12,8 +12,8 @@ import (
 type LocationResponse []LocationItem
 
 type LocationItem struct {
-	Lat         string
-	Lon         string
+	Lat         string `json:"latitude"`
+	Lon         string `json:"longitude"`
 	DisplayName string `json:"display_name"`
 }
 

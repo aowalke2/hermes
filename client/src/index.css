@@ -11,3 +11,44 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.route-pane {
+  min-height: 100vh;
+  position: absolute;
+  z-index: 1;
+  background-color: white;
+  border-right: 1px solid #3C4043;
+}
+
+.route-form {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  gap: 10px;
+  margin-top: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #3C4043;
+}
+
+.route-button {
+  height: 35px;
+  width: 150px;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  border-radius: 8px;
+  border-width: 0;
+  background-color: rgb(99, 26, 194);
+}
+
+.route-button:hover{
+  background-color: rgb(79, 21, 156);
+}
+
+.route-button:active{
+  background-color: rgb(79, 21, 156);
+  transform: scale(0.9);
+}

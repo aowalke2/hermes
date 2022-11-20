@@ -11,6 +11,7 @@
     "geojson2h3": "^1.2.0",
     "mapbox-gl": "^2.10.0",
     "react": "^18.2.0",
+    "react-bootstrap-icons": "^1.9.1",
     "react-dom": "^18.2.0",
     "react-map-gl": "^7.0.19",
     "react-scripts": "^5.0.1",
